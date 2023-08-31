@@ -32,11 +32,7 @@ export const FooterCard = () => {
       setSending(false);
       setError(true);
       toast({
-        title: `${
-          err.response.data.message == "Missing parameters"
-            ? "Preencha a descrição!"
-            : "Erro ao enviar o feedback!"
-        }`,
+        title: `Erro ao enviar feedback! Verifique se a descrição foi preenchida!`,
         description: "Tente novamente mais tarde!",
       });
     }
