@@ -15,10 +15,13 @@ export const FooterCard = () => {
     setSending(true);
 
     try {
-      let response = await axios.post("http://localhost:3000/send-feedback", {
-        rating,
-        description,
-      });
+      let response = await axios.post(
+        "https://feedbackapi-three.vercel.app/send-feedback",
+        {
+          rating,
+          description,
+        }
+      );
 
       if (response) {
         setSending(false);
